@@ -1,0 +1,26 @@
+.jumbotron{
+	text-align: center;
+	background-size: cover !important;
+	min-height: 500px;
+	color: white;  
+	@media (min-width: $screen-sm-min){
+		min-height: 700px;
+		padding-top: 200px;
+		h1{
+			font-size: 60px;
+		}
+	}
+}
+.product{
+	@extend .container;
+	&--item{
+		@include make-sm-column(4);
+		margin-bottom: 30px;
+		&--promotion{
+			@include make-sm-column(6);
+		}
+		&--12{
+			@include make-sm-column(12);
+		}
+	}
+}

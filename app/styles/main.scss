@@ -1,9 +1,12 @@
 $icon-font-path: '../fonts/';
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300');
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower'
-@import "_variables.scss";
-@import "components/_homepage.scss";
+
+@import "variables.scss";
+@import "global.scss";
+@import "components/navbar.scss";
+@import "components/homepage.scss";
