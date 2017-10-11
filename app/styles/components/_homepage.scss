@@ -11,7 +11,48 @@
 		}
 	}
 }
+
+#home-carousel{
+	.carousel-inner {
+		.item {
+			.image{
+				text-align: center;
+				background-size: cover !important;
+				min-height: 732px;
+			}
+			img{
+				width: 100%;
+			}
+			.carousel-caption{
+				top: 30%;
+				h1{
+					font-size: 60px;
+				}
+				@media (max-width: $screen-xs-max){
+					h1{
+						font-size: 32px;
+					}	
+				}
+			}
+		} 
+
+	}
+	.carousel-indicators{
+		bottom: 50px;
+		li{
+			opacity: 0.5;
+			background-color: #ffffff;
+			border:1px solid $red;
+			&.active{
+				background-color: $red;
+				border: $red;
+				opacity: 1;
+			}
+		}
+	}
+}
 .product{
+	margin-top: -40px;
 	@extend .container;
 	&--item{
 		@include make-sm-column(4);

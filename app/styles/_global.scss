@@ -7,6 +7,9 @@ h1{
 	margin: 30px 0;
 	font-size: 46px;
 }
+a{
+	transition:all .2s;
+}
 
 .btn{
 	border-radius: 50px;
@@ -19,17 +22,41 @@ h1{
 			background: $red;
 		}
 	}
+	&-white{
+		background-color: #ffffff;
+		border: solid 2px #ebebeb;
+		color: $red;
+		i{
+			color: #bbc0d4;
+		}
+	}
 	&-lg{
 		font-size: 16px;
-		padding: 15px 35px;
+		padding: 20px 60px;
 	}
+	&-sm{
+		font-size: 14px;
+		padding: 15px 35px;
+		line-height: 1px;
+	}
+	&-mb-50{
+		margin-bottom: 50px;
+	}
+}
+.img{
+	&-max-big{
+		@media ( min-width: $screen-md-min ) {
+			max-width: 400px !important;
+		}
+	}
+
 }
 .badge{
 	&-primary{
 		background: $red;
 	}
 	&--transparent{
-		opacity: .5;
+		background-color: rgba(0, 0, 0, 0.4);
 	}
 	&--absolute{
 		position: absolute;
@@ -38,6 +65,9 @@ h1{
 	    position: relative;
 	    left: 15px;
 	    top: 15px;
+	}
+	&--top{
+		margin-top: 15px;
 	}
 }
 
@@ -57,6 +87,30 @@ h1{
 	}
 	&--promotion{
 		@include make-sm-column(6);
+
+		&--img{
+			@media(min-width: $screen-md-min ){
+				padding-left: 100px
+			}
+		}
+		&--image{
+			border-top-left-radius:10px;
+			border-bottom-left-radius:10px;
+			@media(min-width: $screen-md-min){
+				min-height:500px;
+				min-height: 499px;
+				margin: 0 !important; 
+			}
+			&--left{
+				background-position: left !important;
+			}
+		}
+		&--text{
+			@media(min-width: $screen-md-min){
+				padding-left: 30px;
+			}
+
+		}
 	}
 	p{
 		margin: 0 0 20px;
@@ -64,21 +118,32 @@ h1{
 
 	&--top-bottom{
 		padding: 0;
+		margin: 30px 0;
 		.image{
 			min-height: 230px;
 			background-size: cover !important;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
 		}
 		.text{
 			padding: 15px;
 		}
+		&--min-h{
+			.image{
+				min-height: 269px;
+			}
+		}
 	}
 	@media(min-width: $screen-md-min){
 		&--promotion{
-			margin-top: 80px;
+			margin-top: 50px;
 		}
 		&--12{
 			min-height: 500px;
 		}
+	}
+	&--event{
+		padding: 0
 	}
 	
 }
