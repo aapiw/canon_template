@@ -4,4 +4,11 @@ $grey: #bbc0d4;
 $red: #ec1d24;
 $bg-c: #fafafa;
 
+$nav-breakpoint : 1199px;
+
 $nav-height: 110px;
+
+@media (max-width:$nav-breakpoint){
+	$nav-height: auto;
+
+}

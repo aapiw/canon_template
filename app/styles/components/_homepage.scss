@@ -65,3 +65,35 @@
 		}
 	}
 }
+
+.to-top{
+	@include make-xs-column(2);
+	@include make-xs-column-offset(5);
+	text-align: center;
+	padding: 0;
+	position: fixed;
+	bottom: 34%;
+	&.visible-xs.hide{
+		display: none;
+	}
+	a{
+		font-size: 15px;
+		color:$gray;
+		text-decoration: none;
+		.fa{
+			font-size: 48px;
+			&.fa-circle-thin{
+				i{
+					position: absolute;
+					top: 0;
+					top: -2px;
+					left: 48px;
+				}
+			}
+		}
+		span{
+			width: 100%;
+			float: left;
+		}
+	}
+}

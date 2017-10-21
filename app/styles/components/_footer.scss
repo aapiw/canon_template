@@ -8,6 +8,7 @@ footer{
 	text-align: left;
 	color:$white;
 	padding:88px 0;
+	margin-top: 60px;
 	li:first-child, .opacity{
 		opacity: 0.5;
 	}
@@ -38,6 +39,45 @@ footer{
 			&:not(:last-child){
 				@media(max-width: $screen-xs-max){
 					display: none;
+				}
+			}
+			&:last-child{ //ul
+				padding: 0 20px;
+				a{
+					margin-right: 20px;
+				}
+				@media(max-width: $screen-xs-max){ //mobile social
+					margin-right: 0px;
+					width: 100%;
+					a{
+						font-size: 24px;
+						margin-right: 48px;
+					}
+					li{
+						&:not(:first-child){
+							float: left !important;
+							a:last-child{
+								margin-right: 0px;
+							}
+						}
+						span{
+							// margin-right: 2%;
+							// @media(max-width: 320px){
+							// 	margin-right: 15px;
+							// }
+							// @media(max-width: 375px){
+							// 	margin-right: 15px;
+							// }
+							// @media(max-width: 425px){
+							// 	margin-right: 15px;
+							// }
+						}
+						&:last-child{
+							span:last-child{
+								margin-right: 0 !important;
+							}
+						}
+					}
 				}
 			}
 	}
